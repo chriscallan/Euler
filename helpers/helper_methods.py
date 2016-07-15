@@ -23,8 +23,8 @@ class helper_methods(object):
         return retval
 
     @staticmethod
-    def is_pandigital(in_number, length=9):
-        re_checker = re.compile("^(?!.*([1-{0}]).*\\1)[1-{0}]{{{0}}}$".format(length))
+    def is_pandigital(in_number, lowest_digit=1, length=9):
+        re_checker = re.compile("^(?!.*([{0}-{1}]).*\\1)[{0}-{1}]{{{0}}}$".format(lowest_digit, length))
         return True if len(re_checker.findall(str(in_number))) is not 0 else False
 
 

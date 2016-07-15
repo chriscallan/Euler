@@ -16,6 +16,7 @@ import itertools
 from Euler.helpers.helper_methods import *
 
 max_len = 9
+min_pan = 1
 my_range = range(1, max_len + 1)    # add 1 to make sure we get the digit '9'
 high_numbers = []
 final_answer = []
@@ -26,7 +27,7 @@ for variation in itertools.permutations(my_range, len(my_range)):
 achiever = 0
 for i in range(9000, 10000):
     temp_worker = str(i) + str(i * 2)
-    if helper_methods.is_pandigital(temp_worker, max_len):
+    if helper_methods.is_pandigital(temp_worker, min_pan, max_len):
         print("found pandigital: {0}".format(temp_worker))
         if '0' not in temp_worker:
             if len(str(temp_worker)) == 9:

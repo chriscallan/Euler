@@ -15,7 +15,8 @@ import re
 top_num = 7654321      # largest number will be under 10 digits long (at least in base10)
 
 max_length = 7          # found this from a little manual proofs
-while not (helper_methods.is_pandigital(top_num, max_length) and helper_methods.is_prime(top_num)):
+min_pan = 1
+while not (helper_methods.is_pandigital(top_num, min_pan, max_length) and helper_methods.is_prime(top_num)):
     top_num -= 2
 
 print("answer is: {0}".format(top_num))
