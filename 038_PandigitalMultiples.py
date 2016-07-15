@@ -13,7 +13,7 @@
 # What is the largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer
 #   with (1,2, ... , n) where n > 1?
 import itertools
-from Euler.helpers.helper_methods import *
+from helpers.helper_methods import *
 
 max_len = 9
 min_pan = 1
