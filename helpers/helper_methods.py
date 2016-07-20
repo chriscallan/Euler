@@ -27,4 +27,29 @@ class helper_methods(object):
         re_checker = re.compile("^(?!.*([{0}-{1}]).*\\1)[{0}-{1}]{{{0}}}$".format(lowest_digit, length))
         return True if len(re_checker.findall(str(in_number))) is not 0 else False
 
+    @staticmethod
+    def get_triangle_number(in_number):
+        """
+        Helper method to encapsulate the formula that produces 'triangle' numbers
+        :param in_number: number indicating the 'triangle number' index you'd like the value for
+        :return: the 'triangle number' produced by the equation
+        """
+        return in_number * (in_number + 1) // 2
 
+    @staticmethod
+    def get_pentagonal_number(in_number):
+        """
+        Helper method to encapsulate the formula that produces 'pentagonal numbers'
+        :param in_number: number indicating the 'pentagonal number' index you'd like the value for
+        :return: the 'pentagonal number' produced by the equation
+        """
+        return (in_number * (3 * in_number - 1)) // 2
+
+    @staticmethod
+    def get_hexagonal_number(in_number):
+        """
+        Helper method to encapsulate the formula that produces 'hexagonal numbers'
+        :param in_number: number indicating the 'hexagonal number' index you'd like the value for
+        :return: the 'hexagonal number' produced by the equation
+        """
+        return in_number * (2 * in_number - 1)
